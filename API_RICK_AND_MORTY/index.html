@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>APP rick and morty</title>
+
+    <link rel="icon" type="image/png" sizes="16x16"  href="./favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+   
+    <style>
+        /*Aqui eu modelo todo o corpo do meu HTML*/
+        body{
+            padding: none;
+            align-items: center;
+            text-align: center;
+            background-color: gray;
+            width: 0;
+            height: 0;
+        }
+
+        /*Aqui modela os containers em geral*/
+       .container{
+        width: 100%;
+        max-width: 425px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 50px;
+        column-gap: 90px;
+        margin-top: 20px;
+        margin-left: 200px;
+       }
+
+       /*Aqui modela cada cartão dos personagens*/
+       .card{
+        width: 100%;
+        height: auto;
+        display: block;
+        background-color: aliceblue;
+        border-radius: 8px;
+       }
+
+       /*Aqui modela o espaço para o formulário criado*/
+       .form{
+            position: relative;
+            width: 100%;
+            display: block;
+            
+       } 
+        
+       /*Aqui modela a caixa de pesquisa colocada para filtrar os personagens*/
+       .input__search{
+        width: 400px;
+        align-self: center;
+        outline: none;
+        border: 2px solid #333;
+        font-size: clamp(8px, 5vw, 20px);
+        font-weight: 600;
+        border-radius: 6px;
+        margin-left: 760px;
+        
+       }
+    </style>
+</head>
+
+<body>
+    
+    <form action="main.js" class="form">
+        <input
+            type="search"
+            class="input__search" 
+            placeholder="Nome do personagem" 
+            required  
+        >
+    </form>
+    
+    <div class="container">
+
+    </div>
+   
+    <script src="main.js"></script>
+
+
+
+
+</body>
+</html>
